@@ -9,14 +9,22 @@ namespace iteration1
 {
     class Program
     {
-
-
-
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
 
             Message msg = new Message();
-            Console.WriteLine(msg.HelloMessage + Environment.UserName + " the king de la route");
+            while (true)
+            {
+                Console.WriteLine("coucou écris exit ou tapes sur entrée tsé");
+                string userInput = Console.ReadLine();
+                if (userInput == "exit")
+                {
+                    break;
+                } else if (userInput == "" || Console.ReadKey().Key == ConsoleKey.Enter){
+                    Console.WriteLine(msg.HelloMessage + Environment.UserName + " the king de la route");
+                }
+                
+            }
         }
     }
 }
